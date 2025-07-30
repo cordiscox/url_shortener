@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+shortuuid
+prometheus-fastapi-instrumentator
