@@ -2,14 +2,13 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 import sqlite3
 import shortuuid
-import prometheus_fastapi_instrumentator # <--- Importar
+import prometheus_fastapi_instrumentator
 
-# Inicializar la app FastAPI
 app = FastAPI()
 
 prometheus_fastapi_instrumentator.Instrumentator().instrument(app).expose(app)
 
-conn = sqlite3.connect("urls.db")
+conn = sqlite3.connect('urls.db', check_same_thread=False)   
 cursor = conn.cursor()
 
 cursor.execute("""

@@ -1,1 +1,4 @@
 /venv
+issues.txt
+*.pyc
+__pycache__/
