@@ -2,3 +2,12 @@
 issues.txt
 *.pyc
 __pycache__/
+.terraform/
+*.tfplan
+*.tfstate
+*.tfstate.backup
+crash.log
+.terraform.lock.hcl
+
+*.tfvars
+*.tfvars.json
