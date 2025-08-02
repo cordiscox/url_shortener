@@ -3,6 +3,12 @@ name: CI/CD Pipeline to AWS
 on:
   push:
     branches: [ main ]
+    paths:
+        - 'terraform/**'
+        - 'Dockerfile'
+        - 'requirements.txt'
+        - '**.py'
+        - '.github/workflows/**'
 
 jobs:
   build-and-push-to-ecr:
