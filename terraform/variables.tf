@@ -25,7 +25,6 @@ variable "public_subnet_cidrs" {
 variable "container_image" {
   description = "The full URI of the Docker image in ECR."
   type        = string
-  default     = "291041007750.dkr.ecr.us-east-2.amazonaws.com/url_shortener:c1728efb052cffde3fc8fd00a274f89a6721e64e"
 }
 
 variable "container_port" {
